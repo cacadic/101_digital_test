@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  nextapp:
+    container_name: digital-test
+    image: digital-test
+    platform: linux/amd64
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env-docker
